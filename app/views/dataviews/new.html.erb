@@ -1,0 +1,57 @@
+
+<h1>Add Record</h1>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@dataviews) do |f| %>
+     
+      <%= f.label :cook %> 
+      <%= f.text_field :cook, class: 'form-control' %>
+        </br> </br>
+        <%= f.label :customer_id %> 
+      <%= f.text_field :customer_id, class: 'form-control' %>
+        </br> </br>
+         </br> </br>
+        <%= f.label :customer_name %> 
+      <%= f.text_field :customer_name, class: 'form-control' %>
+        </br> </br>
+        <%= f.label :address %> 
+      <%= f.text_field :address, class: 'form-control' %>
+        </br> </br>
+        </br> </br>
+        <%= f.label :starttime %> 
+      <%= f.datetime_local_field :starttime, class: 'form-control' %>
+        </br> </br>
+        <%= f.label :endtime %> 
+      <%= f.datetime_local_field :endtime, class: 'form-control' %>
+        </br> </br>
+        <%= f.label :totaltime %> 
+      <%= f.datetime_local_field :totaltime, class: 'form-control' %>
+        </br> </br>
+      
+      <%= f.label :money %>
+      <%= f.text_field :money, class: 'form-control' %>
+          </br> </br>
+
+          <%= f.label :paidbycustomer %>
+      <%= f.select :paidbycustomer, ['Yes', 'No'] %>
+          </br> </br>
+       <%= f.label :paidbycook %>
+      <%= f.select :paidbycook, ['Yes', 'No'] %>
+          </br> </br>
+      <%= f.submit "Create account", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
+   <% if @dataviews.errors.any? %>
+  <div>
+    <div>
+      The form contains <%= pluralize(@dataviews.errors.count, "error") %>.
+    </div>
+    <ul>
+    <% @dataviews.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+</div>

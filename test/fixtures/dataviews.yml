@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cook: MyString
+  customer_id: 1
+  customer_name: MyString
+  address: MyText
+  starttime: 2015-12-09 21:11:22
+  endtime: 2015-12-09 21:11:22
+  totaltime: 2015-12-09 21:11:22
+  money: 1
+  paidbycustomer: MyString
+  paidbycook: MyString
+
+two:
+  cook: MyString
+  customer_id: 1
+  customer_name: MyString
+  address: MyText
+  starttime: 2015-12-09 21:11:22
+  endtime: 2015-12-09 21:11:22
+  totaltime: 2015-12-09 21:11:22
+  money: 1
+  paidbycustomer: MyString
+  paidbycook: MyString

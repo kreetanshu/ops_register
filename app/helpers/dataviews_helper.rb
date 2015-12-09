@@ -1,0 +1,2 @@
+module DataviewsHelper
+end
