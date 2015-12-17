@@ -4,7 +4,7 @@ class DataviewsController < ApplicationController
   end
 
   def show
-    @dataviews = Dataview.find(params[:id])
+    @dataview = Dataview.find(params[:id])
           # @linkreq= @service_providers.service_requests
   end
 
