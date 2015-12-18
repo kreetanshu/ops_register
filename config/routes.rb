@@ -1,11 +1,16 @@
 Rails.application.routes.draw do
 
 
+  get 'cooks/index'
+
+  get 'cooks/show'
+
   get 'dataviews/new' => 'dataviews#new'
 
   
 
   resources :dataviews
+  resources :cooks
 
   root 'dataviews#index'
 
