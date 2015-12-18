@@ -1,6 +1,6 @@
 class DataviewsController < ApplicationController
   def index
-    @dataviews = Dataview.all
+    @dataviews = Dataview.all.order(created_at: :desc)
   end
 
   def show
