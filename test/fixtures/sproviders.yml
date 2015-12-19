@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  uname: MyString
+  doj: 2015-12-19 22:48:40
+  contact_no: 1
+  status: MyString
+  payment: 1
+  credit: 1
+  date: 2015-12-19 22:48:40
+
+two:
+  uname: MyString
+  doj: 2015-12-19 22:48:40
+  contact_no: 1
+  status: MyString
+  payment: 1
+  credit: 1
+  date: 2015-12-19 22:48:40

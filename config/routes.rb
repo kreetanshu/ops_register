@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
 
+  resources :sproviders
+  resources :cooks
   get 'cooks/index'
 
   get 'cooks/show'

@@ -1,0 +1,45 @@
+<%= form_for(@sprovider) do |f| %>
+  <% if @sprovider.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sprovider.errors.count, "error") %> prohibited this sprovider from being saved:</h2>
+
+      <ul>
+      <% @sprovider.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :uname %><br>
+    <%= f.text_field :uname %>
+  </div>
+  <div class="field">
+    <%= f.label :doj %><br>
+    <%= f.date_select :doj %>
+  </div>
+  <div class="field">
+    <%= f.label :contact_no %><br>
+    <%= f.number_field :contact_no %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br>
+    <%= f.select :status, ['Active', 'Inactive'] %>
+  </div>
+  <div class="field">
+    <%= f.label :payment %><br>
+    <%= f.number_field :payment %>
+  </div>
+  <div class="field">
+    <%= f.label :credit %><br>
+    <%= f.number_field :credit %>
+  </div>
+  <div class="field">
+    <%= f.label :date %><br>
+    <%= f.date_select :date %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

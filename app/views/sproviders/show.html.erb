@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Uname:</strong>
+  <%= @sprovider.uname %>
+</p>
+
+<p>
+  <strong>Doj:</strong>
+  <%= @sprovider.doj %>
+</p>
+
+<p>
+  <strong>Contact no:</strong>
+  <%= @sprovider.contact_no %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @sprovider.status %>
+</p>
+
+<p>
+  <strong>Payment:</strong>
+  <%= @sprovider.payment %>
+</p>
+
+<p>
+  <strong>Credit:</strong>
+  <%= @sprovider.credit %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @sprovider.date %>
+</p>
+
+<%= link_to 'Edit', edit_sprovider_path(@sprovider) %> |
+<%= link_to 'Back', sproviders_path %>

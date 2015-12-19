@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Sproviders</h1>
+
+<table class="table table-hover table-condensed">
+  <thead>
+    <tr>
+      <th>Uname </th>
+      <th>Doj </th>
+      <th>Contact no</th>
+      <th>Status</th>
+      <th>Payment</th>
+      <th>Credit</th>
+      <th>Date</th>
+      <th>Show</th>
+      <th>Edit</th>
+      <th>Destroy</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sproviders.each do |sprovider| %>
+      <tr>
+        <td><%= sprovider.uname %></td>
+        <td><%= sprovider.doj %></td>
+        <td><%= sprovider.contact_no %></td>
+        <td><%= sprovider.status %></td>
+        <td><%= sprovider.payment %></td>
+        <td><%= sprovider.credit %></td>
+        <td><%= sprovider.date %></td>
+        <td><%= link_to 'Show', sprovider %></td>
+        <td><%= link_to 'Edit', edit_sprovider_path(sprovider) %></td>
+        <td><%= link_to 'Destroy', sprovider, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sprovider', new_sprovider_path %>
