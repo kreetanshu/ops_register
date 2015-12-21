@@ -2,7 +2,10 @@ Rails.application.routes.draw do
 
 
   resources :sproviders
-  resources :cooks
+  #resources :cooks
+  
+  get '/cooks' => 'cooks#index'
+  get 'cooks/:spid' => 'cooks#cookrequest'
   get 'cooks/index'
 
   get 'cooks/show'

@@ -1,0 +1,36 @@
+ <table class="table table-hover table-condensed"> <thead>
+      <tr>
+      	
+        <th>Cook</th>
+        <th>customer_id</th>
+        <th>customer_name</th>
+        <th>address</th>
+        <th>starttime</th>
+        <th>endtime</th>
+        <th>totaltime</th>
+        <th>money</th>
+        <th>paidbycustomer</th>
+        <th>paidbycook</th>
+        <th>Created At</th>
+        <th>Edit</th>
+      </tr>
+        </thead>
+        <tbody> 
+        <% @dataviewc.each do |post| %>   
+       <tr>
+         <td><%= link_to post.cook, "#"%></td>
+         <td><%=post.customer_id%></td>
+         <td><%=post.customer_name%></td>
+         <td><%=post.address%></td>
+         <td><%=post.starttime%></td>
+         <td><%=post.endtime%></td>
+         <td><%=post.totaltime%></td>
+         <td><%=post.money%></td>
+        <td><%=post.paidbycustomer%></td>
+         <td><%=post.paidbycook%></td>  
+         <td><%= post.created_at.strftime("%b %d. %Y")%></td>
+         <td><%= link_to "Edit", {:controller => 'dataviews' , :action => 'edit',:id => post.id}%></td>
+      </tr><% end %></tbody></table>
+</br></br>
+<p><%= link_to "Add New", dataviews_new_path %></p>
+ 
