@@ -12,6 +12,7 @@
         <th>money</th>
         <th>paidbycustomer</th>
         <th>paidbycook</th>
+        <th>type</th>
         <th>Created At</th>
         <th>Edit</th>
       </tr>
@@ -28,7 +29,8 @@
          <td><%=@dataview.totaltime%></td>
          <td><%=@dataview.money%></td>
         <td><%=@dataview.paidbycustomer%></td>
-         <td><%=@dataview.paidbycook%></td>  
+         <td><%=@dataview.paidbycook%></td> 
+         <td><%=post.typere%></td>   
          <td><%=@dataview.created_at.strftime("%b %d. %Y")%></td>
          <td><%= link_to "Edit", {:controller => 'dataviews' , :action => 'edit',:id => @dataview.id}%></td>
       </tr></tbody></table>

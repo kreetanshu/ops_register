@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
 
 
+  get 'customerrequests/index'
+
+  get 'customerrequests/show'
+
+  resources :customers
   resources :sproviders
   #resources :cooks
   
@@ -13,7 +18,7 @@ Rails.application.routes.draw do
   get 'dataviews/new' => 'dataviews#new'
 
   
-
+  resources :customerrequests
   resources :dataviews
   resources :cooks
 

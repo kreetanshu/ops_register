@@ -11,10 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151221062152) do
+ActiveRecord::Schema.define(version: 20151221174913) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "customers", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "password_hash"
+    t.string   "password_salt"
+    t.integer  "contact_no"
+    t.string   "token"
+    t.string   "reset_digest"
+    t.datetime "reset_sent_at"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
 
   create_table "dataviews", force: :cascade do |t|
     t.string   "cook"
@@ -31,6 +44,7 @@ ActiveRecord::Schema.define(version: 20151221062152) do
     t.datetime "updated_at",     null: false
     t.datetime "doj"
     t.integer  "spid"
+    t.string   "typere"
   end
 
   create_table "sproviders", force: :cascade do |t|

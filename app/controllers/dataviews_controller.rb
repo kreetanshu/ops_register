@@ -30,7 +30,7 @@ class DataviewsController < ApplicationController
   def update
     @dataviews = Dataview.find(params[:id])
    # @service = Service.new(service_params)
-    if @dataviews..update_attributes(dataview_params)
+    if @dataviews.update_attributes(dataview_params)
       redirect_to dataviews_path
       flash[:info] = "Record is added."
     else
@@ -42,6 +42,6 @@ class DataviewsController < ApplicationController
   end
   private
    def dataview_params
-      params.require(:dataview).permit(:cook, :customer_id, :customer_name, :address, :starttime ,:endtime,:totaltime,:money,:paidbycustomer,:paidbycook)
+      params.require(:dataview).permit(:cook, :customer_id, :customer_name, :address, :starttime ,:endtime,:totaltime,:money,:paidbycustomer,:paidbycook,:spid,:typere)
     end
 end

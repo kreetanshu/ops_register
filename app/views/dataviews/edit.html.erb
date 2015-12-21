@@ -50,7 +50,12 @@
        <%= f.label :paidbycook %>
       <%= f.select :paidbycook, ['Yes', 'No'] %>
           </br> </br>
-      <%= f.submit "Create account", class: "btn btn-primary" %>
+           <%= f.label :type %>
+      <%= f.select :typere, ['Permanent', 'Temprorary'] %>
+
+      </br> </br>
+      <%= f.submit "Update", class: "btn btn-primary" %>
+
     <% end %>
   </div>
 </div>
