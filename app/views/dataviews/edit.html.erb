@@ -17,20 +17,20 @@
     <%= form_for(@dataviews) do |f| %>
      
       <%= f.label :cook %> 
-      <%= f.text_field :cook, class: 'form-control' %>
+      <%= f.collection_select :cook, Sprovider.all, :id, :uname %>
         </br> </br>
         <%= f.label :customer_id %> 
-      <%= f.text_field :customer_id, class: 'form-control' %>
+     <%= f.collection_select :customer_id, Customer.all, :name, :id %>
         </br> </br>
-         </br> </br>
+        
         <%= f.label :customer_name %> 
-      <%= f.text_field :customer_name, class: 'form-control' %>
+      <%= f.collection_select :customer_name, Customer.all, :id, :name %>
         </br> </br>
         <%= f.label :address %> 
       <%= f.text_field :address, class: 'form-control' %>
         </br> </br>
-    
-        <%= f.label :starttime %></br>
+        
+      <%= f.label :starttime %></br>
       <%= f.time_select :starttime, :start_time => Time.now, class: 'form-control'  %>
         </br> </br>
       <%= f.label :endtime %></br>
@@ -41,7 +41,7 @@
         </br> </br>
       
       <%= f.label :money %>
-      <%= f.text_field :money, class: 'form-control' %>
+      <%= f.number_field :money, class: 'form-control' %>
           </br> </br>
 
           <%= f.label :paidbycustomer %>
@@ -50,14 +50,17 @@
        <%= f.label :paidbycook %>
       <%= f.select :paidbycook, ['Yes', 'No'] %>
           </br> </br>
-           <%= f.label :type %>
+        
+       <%= f.label :type %>
       <%= f.select :typere, ['Permanent', 'Temprorary'] %>
-
+          </br> </br>
+          <%= f.label :spid %> 
+      <%= f.collection_select :spid, Sprovider.all, :uname, :id %>
       </br> </br>
-      <%= f.submit "Update", class: "btn btn-primary" %>
-
+      <%= f.submit "Create account", class: "btn btn-primary" %>
     <% end %>
+    <%= link_to "DateView", dataviews_path %>
   </div>
+
 </div>
- <%= link_to "DateView", dataviews_path %></p>
-  
+ 
