@@ -1,0 +1,45 @@
+<%= form_for(@negative_feedback) do |f| %>
+  <% if @negative_feedback.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@negative_feedback.errors.count, "error") %> prohibited this negative_feedback from being saved:</h2>
+
+      <ul>
+      <% @negative_feedback.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :date %><br>
+    <%= f.date_select :date %>
+  </div>
+  <div class="field">
+    <%= f.label :cook %><br>
+    <%= f.collection_select :cook, Sprovider.all, :id, :uname %>
+  </div>
+  <div class="field">
+    <%= f.label :customer %><br>
+    <%= f.collection_select :customer, Customer.all, :id, :name %>
+  </div>
+  <div class="field">
+    <%= f.label :feedback %><br>
+    <%= f.text_area :feedback %>
+  </div>
+  <div class="field">
+    <%= f.label :remark %><br>
+    <%= f.text_area :remark %>
+  </div>
+  <div class="field">
+    <%= f.label :spid %><br>
+    <%= f.collection_select :spid, Sprovider.all, :uname, :id %>
+  </div>
+  <div class="field">
+    <%= f.label :customer_id %><br>
+    <%= f.collection_select :customer_id, Customer.all, :name, :id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

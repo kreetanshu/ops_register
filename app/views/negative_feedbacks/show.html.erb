@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @negative_feedback.date %>
+</p>
+
+<p>
+  <strong>Cook:</strong>
+  <%= @negative_feedback.cook %>
+</p>
+
+<p>
+  <strong>Customer:</strong>
+  <%= @negative_feedback.customer %>
+</p>
+
+<p>
+  <strong>Feedback:</strong>
+  <%= @negative_feedback.feedback %>
+</p>
+
+<p>
+  <strong>Remark:</strong>
+  <%= @negative_feedback.remark %>
+</p>
+
+<p>
+  <strong>Spid:</strong>
+  <%= @negative_feedback.spid %>
+</p>
+
+<p>
+  <strong>Customer:</strong>
+  <%= @negative_feedback.customer_id %>
+</p>
+
+<%= link_to 'Edit', edit_negative_feedback_path(@negative_feedback) %> |
+<%= link_to 'Back', negative_feedbacks_path %>

@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 
+  
   get 'customerrequests/index'
 
   get 'customerrequests/show'
@@ -21,7 +22,8 @@ Rails.application.routes.draw do
   resources :customerrequests
   resources :dataviews
   resources :cooks
-
+  #resources :negative_feedbacks
+  resources :negative_feedbacks
   root 'dataviews#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
