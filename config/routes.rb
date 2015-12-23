@@ -17,7 +17,7 @@ Rails.application.routes.draw do
 
   get 'dataviews/new' => 'dataviews#new'
 
-  
+  get 'customerrequests/:customer_id' => 'customerrequests#userrequest'
   resources :customerrequests
   resources :dataviews
   resources :cooks

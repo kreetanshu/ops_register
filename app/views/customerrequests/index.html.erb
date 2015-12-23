@@ -12,7 +12,7 @@
         <tbody> 
         <% @dataviewscust.each do |post| %>   
        <tr>
-         <td><%= link_to post.cooklist, "#"%></td>
+         <td><%= link_to post.cooklist, {:controller => 'customerrequests' , :action => 'userrequest' , :customer_id => post.customer_id }%></td>
          
          <td><%=post.total_price%></td>
          <td><%=post.no_of_requests%></td>
@@ -36,7 +36,7 @@
         <% @dataviewscust.each do |post| %>  
         <%if post.created_at.month == Date.today.month %> 
        <tr>
-         <td><%= link_to post.cooklist,"#"%></td>
+         <td><%= link_to post.cooklist,{:controller => 'customerrequests' , :action => 'userrequest' , :customer_id => post.customer_id }%></td>
          
          <td><%=post.total_price%></td>
          <td><%=post.no_of_requests%></td>
