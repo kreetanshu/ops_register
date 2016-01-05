@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
 
   
+  devise_for :users
   get 'customerrequests/index'
 
   get 'customerrequests/show'
@@ -17,7 +18,10 @@ Rails.application.routes.draw do
   get 'cooks/show'
 
   get 'dataviews/new' => 'dataviews#new'
-
+  devise_scope :user do    
+  match '/sessions/user', to: 'devise/sessions#create', via: :post
+  get '/users/sign_out' => 'devise/sessions#destroy'
+  end
   get 'customerrequests/:customer_id' => 'customerrequests#userrequest'
   resources :customerrequests
   resources :dataviews
